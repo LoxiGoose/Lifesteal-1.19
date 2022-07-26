@@ -1,0 +1,12 @@
+{
+  "item.lifesteal.heart_core": "Heart Core",
+  "item.lifesteal.heart_fragment": "Heart Fragment",
+  "item.lifesteal.heart_crystal": "Heart Crystal",
+  "block.lifesteal.heart_core_block": "Block of Heart Core",
+  "block.lifesteal.heart_ore": "Heart Ore",
+  "block.lifesteal.deepslate_heart_ore": "Deepslate Heart Ore",
+  "block.lifesteal.netherrack_heart_ore": "Netherrack Heart Ore",
+  "block.lifesteal.endstone_heart_ore": "Endstone Heart Ore",
+
+  "itemGroup.lifesteal": "Lifesteal"
+}
