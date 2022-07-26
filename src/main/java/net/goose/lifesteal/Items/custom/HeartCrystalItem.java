@@ -2,32 +2,33 @@ package net.goose.lifesteal.Items.custom;
 
 import net.goose.lifesteal.Configurations.ConfigHolder;
 import net.goose.lifesteal.api.IHeartCap;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.CapabilityToken;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 
 public class HeartCrystalItem extends Item {
 
-    public static final FoodProperties HeartCrystal = (new FoodProperties.Builder()).alwaysEat().build();
+    public static final Food HeartCrystal = (new Food.Builder()).alwaysEat().build();
 
-    public static final Capability<IHeartCap> HEART_CAP_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
-    });
+    @CapabilityInject(IHeartCap.class)
+    public static final Capability<IHeartCap> HEART_CAP_CAPABILITY = null;
 
     public HeartCrystalItem(Properties pProperties){
         super(pProperties);
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack item, Level level, LivingEntity entity) {
+    public ItemStack finishUsingItem(ItemStack item, World level, LivingEntity entity) {
 
-        if(!level.isClientSide() && entity instanceof ServerPlayer serverPlayer){
+        if(!level.isClientSide() && entity instanceof ServerPlayerEntity){
+
+            ServerPlayerEntity serverPlayer = (ServerPlayerEntity) entity;
 
             if(!ConfigHolder.SERVER.disableHeartCrystals.get()){
 
@@ -38,7 +39,7 @@ public class HeartCrystalItem extends Item {
                 serverPlayer.heal(serverPlayer.getMaxHealth());
 
             }else{
-                entity.sendMessage(Component.nullToEmpty("Heart Crystals have been disabled in the configurations."), entity.getUUID());
+                entity.sendMessage(ITextComponent.nullToEmpty("Heart Crystals have been disabled in the configurations."), entity.getUUID());
                 item.shrink(-1);
                 serverPlayer.containerMenu.broadcastChanges();
 

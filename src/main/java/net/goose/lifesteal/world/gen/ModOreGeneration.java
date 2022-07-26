@@ -1,116 +1,113 @@
 package net.goose.lifesteal.world.gen;
 
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.dimension.LevelStem;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.Dimension;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
+import net.minecraft.world.gen.placement.ConfiguredPlacement;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import java.util.Arrays;
 
 public class ModOreGeneration {
     public static void generateOres(final BiomeLoadingEvent event){
-        spawnOreInAllBiomes(OreType.HEART_ORE, event, LevelStem.OVERWORLD.toString());
-        spawnOreInAllBiomes(OreType.NETHERRACK_HEART_ORE, event, LevelStem.NETHER.toString());
+        spawnOreInAllBiomes(OreType.HEART_ORE, event, Dimension.OVERWORLD.toString());
+        spawnOreInAllBiomes(OreType.NETHERRACK_HEART_ORE, event, Dimension.NETHER.toString());
     }
 
-    private static OreConfiguration getOverworldFeatureConfig(OreType ore) {
-        return new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE,
+    private static OreFeatureConfig getOverworldFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                 ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
     }
 
-    private static OreConfiguration getNetherFeatureConfig(OreType ore) {
-        return new OreConfiguration(OreConfiguration.Predicates.NETHERRACK,
+    private static OreFeatureConfig getNetherFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,
                 ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
     }
 
-    private static OreConfiguration getEndFeatureConfig(OreType ore) {
-        return new OreConfiguration(new BlockMatchTest(Blocks.END_STONE),
+    private static OreFeatureConfig getEndFeatureConfig(OreType ore) {
+        return new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE),
                 ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
     }
 
     private static ConfiguredFeature<?, ?> makeOreFeature(OreType ore, String dimensionToSpawnIn) {
-        OreConfiguration oreFeatureConfig = null;
+        OreFeatureConfig oreFeatureConfig = null;
 
-        if(dimensionToSpawnIn.equals(LevelStem.OVERWORLD.toString())) {
+        if(dimensionToSpawnIn.equals(Dimension.OVERWORLD.toString())) {
             oreFeatureConfig = getOverworldFeatureConfig(ore);
-        } else if(dimensionToSpawnIn.equals(LevelStem.NETHER.toString())) {
+        } else if(dimensionToSpawnIn.equals(Dimension.NETHER.toString())) {
             oreFeatureConfig = getNetherFeatureConfig(ore);
-        } else if(dimensionToSpawnIn.equals(LevelStem.END.toString())) {
+        } else if(dimensionToSpawnIn.equals(Dimension.END.toString())) {
             oreFeatureConfig = getEndFeatureConfig(ore);
         }
 
-        RangeDecoratorConfiguration rangeDecoratorConfiguration
-                = new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(ore.getMinHeight()),
-                VerticalAnchor.absolute(ore.getMaxHeight())));
+        ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configured(
+                new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
 
-        return registerOreFeature(ore, oreFeatureConfig, rangeDecoratorConfiguration);
+        return registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
     }
 
     private static void spawnOreInOverworldInGivenBiomes(OreType ore, final BiomeLoadingEvent event, Biome... biomesToSpawnIn) {
-        OreConfiguration oreFeatureConfig = new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE,
+        OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                 ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
 
-        RangeDecoratorConfiguration rangeDecoratorConfiguration
-                = new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(ore.getMinHeight()),
-                VerticalAnchor.absolute(ore.getMaxHeight())));
+        ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configured(
+                new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
 
 
-        ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, rangeDecoratorConfiguration);
+        ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
 
         if (Arrays.stream(biomesToSpawnIn).anyMatch(b -> b.getRegistryName().equals(event.getName()))) {
-            event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, oreFeature);
+            event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
         }
     }
 
     private static void spawnOreInOverworldInAllBiomes(OreType ore, final BiomeLoadingEvent event) {
-        OreConfiguration oreFeatureConfig = new OreConfiguration(OreConfiguration.Predicates.NATURAL_STONE,
+        OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                 ore.getBlock().get().defaultBlockState(), ore.getMaxVeinSize());
 
-        RangeDecoratorConfiguration rangeDecoratorConfiguration
-                = new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.absolute(ore.getMinHeight()),
-                VerticalAnchor.absolute(ore.getMaxHeight())));
+        ConfiguredPlacement<TopSolidRangeConfig> configuredPlacement = Placement.RANGE.configured(
+                new TopSolidRangeConfig(ore.getMinHeight(), ore.getMinHeight(), ore.getMaxHeight()));
 
-        ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, rangeDecoratorConfiguration);
+        ConfiguredFeature<?, ?> oreFeature = registerOreFeature(ore, oreFeatureConfig, configuredPlacement);
 
-        event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, oreFeature);
+        event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
     }
 
     private static void spawnOreInSpecificModBiome(Biome biomeToSpawnIn, OreType currentOreType,
                                                    final BiomeLoadingEvent event, String dimension) {
         if(event.getName().toString().contains(biomeToSpawnIn.getRegistryName().toString())) {
-            event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+            event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                     makeOreFeature(currentOreType, dimension));
         }
     }
 
-    private static void spawnOreInSpecificBiome(ResourceKey<Biome> biomeToSpawnIn, OreType currentOreType,
+    private static void spawnOreInSpecificBiome(RegistryKey<Biome> biomeToSpawnIn, OreType currentOreType,
                                                 final BiomeLoadingEvent event, String dimension) {
         if(event.getName().toString().contains(biomeToSpawnIn.location().toString())) {
-            event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+            event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                     makeOreFeature(currentOreType, dimension));
         }
     }
 
     private static void spawnOreInAllBiomes(OreType currentOreType, final BiomeLoadingEvent event, String dimension) {
-        event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+        event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                 makeOreFeature(currentOreType, dimension));
     }
 
-    private static ConfiguredFeature<?, ?> registerOreFeature(OreType ore, OreConfiguration oreFeatureConfig,
-                                                              RangeDecoratorConfiguration configuredDecorator) {
-        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, ore.getBlock().get().getRegistryName(),
-                Feature.ORE.configured(oreFeatureConfig).range(configuredDecorator)
+    private static ConfiguredFeature<?, ?> registerOreFeature(OreType ore, OreFeatureConfig oreFeatureConfig,
+                                                              ConfiguredPlacement configuredPlacement) {
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, ore.getBlock().get().getRegistryName(),
+                Feature.ORE.configured(oreFeatureConfig).decorated(configuredPlacement)
                         .squared().count(ore.getVeinsPerChunk()));
     }
 }

@@ -40,5 +40,6 @@ public class LifeSteal
     {
         // some preinit code
         LOGGER.info("Lifestealers are on the loose!");
+
     }
 }

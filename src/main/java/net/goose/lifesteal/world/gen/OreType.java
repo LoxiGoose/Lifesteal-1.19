@@ -1,7 +1,7 @@
 package net.goose.lifesteal.world.gen;
 
 import net.goose.lifesteal.Blocks.ModBlocks;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
@@ -9,13 +9,13 @@ public enum OreType {
     NETHERRACK_HEART_ORE(Lazy.of(ModBlocks.NETHERRACK_HEART_ORE), 12, 12, 50, 12);
 
 
-    private final Lazy<Block> Block;
+    private final Lazy<net.minecraft.block.Block> Block;
     private final int maxVeinSize;
     private final int minHeight;
     private final int maxHeight;
     private final int veinsPerChunk;
 
-    OreType(Lazy<net.minecraft.world.level.block.Block> block, int maxVeinSize, int minHeight, int maxHeight, int veinsPerChunk) {
+    OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight, int veinsPerChunk) {
         Block = block;
         this.maxVeinSize = maxVeinSize;
         this.minHeight = minHeight;

@@ -10,6 +10,7 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.GameType;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.Set;
@@ -25,6 +26,10 @@ public class HeartCap implements IHeartCap {
     private final int minimumamountofheartscanhave = ConfigHolder.SERVER.minimumamountofheartscanhave.get();
     private final int defaultLives = ConfigHolder.SERVER.amountOfLives.get();
     private int lives = defaultLives;
+
+    public HeartCap(){
+        this.livingEntity = null;
+    }
 
     public HeartCap(@Nullable final LivingEntity entity) {
         this.livingEntity = entity;
@@ -155,17 +160,21 @@ public class HeartCap implements IHeartCap {
     @Override
     public void setLives(int lives) {if(!livingEntity.level.isClientSide){this.lives = lives;}}
 
+    @Nonnull
     @Override
     public CompoundNBT serializeNBT() {
+
         CompoundNBT tag = new CompoundNBT();
+
         tag.putInt("heartdifference", getHeartDifference());
         tag.putInt("lives", getLives());
         return tag;
     }
 
     @Override
-    public void deserializeNBT(CompoundNBT tag) {
-        setHeartDifference(tag.getInt("heartdifference"));
-        setLives(tag.getInt("lives"));
+    public void deserializeNBT(@Nonnull final CompoundNBT nbt) {
+        setHeartDifference(nbt.getInt("heartdifference"));
+        setLives(nbt.getInt("lives"));
     }
+
 }

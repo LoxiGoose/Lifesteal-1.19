@@ -22,21 +22,27 @@ public class HeartCapAttacher {
 
             private final IHeartCap backend = new HeartCap((LivingEntity) event.getObject());
             private final LazyOptional<IHeartCap> optionalData = LazyOptional.of(() -> backend);
+            private final Capability<IHeartCap> capability = CapabilityRegistry.HEART_CAP_CAPABILITY;
 
             @Override
             public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
-                return CapabilityRegistry.HEART_CAP_CAPABILITY.orEmpty(cap, this.optionalData);
+
+                if (cap == capability){
+                    return optionalData.cast();
+                }
+                return LazyOptional.empty();
             }
 
             @Override
             public CompoundNBT serializeNBT() {
-                return this.backend.serializeNBT();
+                return backend.serializeNBT();
             }
 
             @Override
             public void deserializeNBT(CompoundNBT nbt) {
                 this.backend.deserializeNBT(nbt);
             }
+
         }
 
         final HeartCapProvider provider = new HeartCapProvider();

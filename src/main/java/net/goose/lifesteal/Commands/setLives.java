@@ -4,15 +4,14 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.goose.lifesteal.api.IHeartCap;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.command.CommandSource;
+import net.minecraft.command.Commands;
+import net.minecraft.command.arguments.EntityArgument;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.CapabilityToken;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.util.LazyOptional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,8 +19,8 @@ import org.apache.logging.log4j.Logger;
 public class setLives {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final Capability<IHeartCap> HEART_CAP_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {
-    });
+    @CapabilityInject(IHeartCap.class)
+    public static final Capability<IHeartCap> HEART_CAP_CAPABILITY = null;
 
     public static LazyOptional<IHeartCap> getHeart(final Entity entity) {
         if (entity == null)
@@ -29,7 +28,7 @@ public class setLives {
         return entity.getCapability(HEART_CAP_CAPABILITY);
     }
 
-    public setLives(CommandDispatcher<CommandSourceStack> dispatcher){
+    public setLives(CommandDispatcher<CommandSource> dispatcher){
         dispatcher.register(
                 Commands.literal("setLives")
                         .requires((commandSource) -> {return commandSource.hasPermission(2);})
@@ -39,7 +38,7 @@ public class setLives {
                                 ))));
     }
 
-    private int setLives(CommandSourceStack source, Entity chosenentity, int amount) throws CommandSyntaxException{
+    private int setLives(CommandSource source, Entity chosenentity, int amount) throws CommandSyntaxException{
 
         String sourceTextName = source.getTextName();
 
@@ -52,11 +51,11 @@ public class setLives {
             LivingEntity playerthatsentcommand = source.getPlayerOrException();
 
             if(chosenentity != playerthatsentcommand){
-                playerthatsentcommand.sendMessage(Component.nullToEmpty("Set "+ chosenentity.getName().getString() +"'s lives to "+amount), playerthatsentcommand.getUUID());
+                playerthatsentcommand.sendMessage(ITextComponent.nullToEmpty("Set "+ chosenentity.getName().getString() +"'s lives to "+amount), playerthatsentcommand.getUUID());
             }
         }
 
-        chosenentity.sendMessage(Component.nullToEmpty("Your lives has been set to "+amount), chosenentity.getUUID());
+        chosenentity.sendMessage(ITextComponent.nullToEmpty("Your lives has been set to "+amount), chosenentity.getUUID());
         return 1;
     }
 }

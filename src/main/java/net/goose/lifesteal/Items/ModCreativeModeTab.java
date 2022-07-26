@@ -1,10 +1,10 @@
 package net.goose.lifesteal.Items;
 
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 
 public class ModCreativeModeTab {
-    public static final CreativeModeTab LIFE_TAB = new CreativeModeTab("lifesteal") {
+    public static final ItemGroup LIFE_TAB = new ItemGroup("lifesteal") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.HEART_CRYSTAL.get());
