@@ -8,5 +8,7 @@
   "block.lifesteal.netherrack_heart_ore": "Netherrack Heart Ore",
   "block.lifesteal.endstone_heart_ore": "Endstone Heart Ore",
 
+  "enchantment.lifesteal.lifesteal": "Lifesteal",
+
   "itemGroup.lifesteal": "Lifesteal"
 }
