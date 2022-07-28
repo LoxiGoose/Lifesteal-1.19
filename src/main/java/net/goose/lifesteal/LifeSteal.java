@@ -4,6 +4,7 @@ import net.goose.lifesteal.Blocks.ModBlocks;
 import net.goose.lifesteal.Capability.CapabilityRegistry;
 import net.goose.lifesteal.Configurations.ConfigHolder;
 import net.goose.lifesteal.Items.ModItems;
+import net.goose.lifesteal.enchantment.ModEnchantments;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -25,6 +26,7 @@ public class LifeSteal
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the setup method for modloading
 
+        ModEnchantments.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 

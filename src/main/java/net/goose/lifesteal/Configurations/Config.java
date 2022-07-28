@@ -18,6 +18,7 @@ public class Config {
     public final ForgeConfigSpec.BooleanValue disableHeartLoss;
     public final ForgeConfigSpec.IntValue HeartCrystalAmountGain;
     public final ForgeConfigSpec.DoubleValue HeartCoreHeal;
+    public final ForgeConfigSpec.BooleanValue disableEnchantments;
 
     //public final ForgeConfigSpec.BooleanValue bannedUponLosingAllHeartsOrLives;
 
@@ -32,12 +33,13 @@ public class Config {
 
         builder.pop();
 
-        builder.comment("This category is the configuration for items in this mod");
-        builder.push("Items");
+        builder.comment("This category is the configuration for items and enchantments in this mod");
+        builder.push("Items and Enchantments");
         this.HeartCrystalAmountGain = buildInt(builder, "Amount of HitPoints Heart Crystal Permanently Gives:", 2, 1, Integer.MAX_VALUE, "This is the amount of hit points a Heart Crystal should give when used. 2 HitPoints = 1 Heart, 3 = 1.5 Heart.");
         this.HeartCoreHeal = buildDouble(builder, "Percentage of max Health Heart Core Heals", 0.25, 0.01, 1, "The percentage of max health a heart core should heal when used.");
         this.disableHeartCrystals = buildBoolean(builder, "Disable Heart Crystals:", false, "If you just want the generic Lifesteal mod, you can disable this and nobody can gain hearts through Heart Crystals but only through lifestealing.");
         this.disableHeartCores = buildBoolean(builder, "Disable Heart Cores:", false, "Heart Cores can heal on default 25% of your health if right clicked. This value determines if they should be disabled.");
+        this.disableEnchantments = buildBoolean(builder, "Disable Enchantments:", false, "This value determines whether modded enchantments from this mod should be disabled or not.");
         //this.bannedUponLosingAllHeartsOrLives = buildBoolean(builder, "Should Players get Banned When They Lose all Lives/Hearts:", false, "When this is false, players will go into spectator mode. Otherwise, players will get banned.");
 
         builder.pop();

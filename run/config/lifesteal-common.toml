@@ -15,19 +15,6 @@
 	#When this is false, you will lose hearts when killed by anything. Otherwise, you can only lose max hearts when killed by a player.
 	"Lose Hearts Only When Killed By a Player:" = false
 
-#This category is the configuration for items in this mod
-[Items]
-	#If you just want the generic Lifesteal mod, you can disable this and nobody can gain hearts through Heart Crystals but only through lifestealing.
-	"Disable Heart Crystals:" = false
-	#The percentage of max health a heart core should heal when used.
-	#Range: 0.01 ~ 1.0
-	"Percentage of max Health Heart Core Heals" = 0.25
-	#This is the amount of hit points a Heart Crystal should give when used. 2 HitPoints = 1 Heart, 3 = 1.5 Heart.
-	#Range: > 1
-	"Amount of HitPoints Heart Crystal Permanently Gives:" = 2
-	#Heart Cores can heal on default 25% of your health if right clicked. This value determines if they should be disabled.
-	"Disable Heart Cores:" = false
-
 #This category is everything related to life stealing from someone.
 ["Lifesteal Related"]
 	#This value determines if a player should still earn hearts from a player they killed even if the player doesn't have hearts to spare. EX: MinimumHeartHave or disableHeartLoss settings
@@ -48,4 +35,19 @@
 ["MISC/FUN"]
 	#When this is false, you can only gain hearts from killing players. Otherwise, any mob will give you hearts.
 	"Killing any Mobs Gives Hearts:" = true
+
+#This category is the configuration for items and enchantments in this mod
+["Items and Enchantments"]
+	#This is the amount of hit points a Heart Crystal should give when used. 2 HitPoints = 1 Heart, 3 = 1.5 Heart.
+	#Range: > 1
+	"Amount of HitPoints Heart Crystal Permanently Gives:" = 2
+	#The percentage of max health a heart core should heal when used.
+	#Range: 0.01 ~ 1.0
+	"Percentage of max Health Heart Core Heals" = 0.25
+	#If you just want the generic Lifesteal mod, you can disable this and nobody can gain hearts through Heart Crystals but only through lifestealing.
+	"Disable Heart Crystals:" = false
+	#Heart Cores can heal on default 25% of your health if right clicked. This value determines if they should be disabled.
+	"Disable Heart Cores:" = false
+	#This value determines whether modded enchantments from this mod should be disabled or not.
+	"Disable Enchantments:" = false
 

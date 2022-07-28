@@ -1,102 +1,138 @@
-[26Jul2022 13:34:17.623] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevserver, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.39]
-[26Jul2022 13:34:17.626] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.1.3+8.1.3+main-8.1.x.c94d18ec starting: java version 1.8.0_342 by Amazon.com Inc.
-[26Jul2022 13:34:17.961] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[26Jul2022 13:34:18.006] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/tardi/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar Service=ModLauncher Env=SERVER
-[26Jul2022 13:34:19.095] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevserver' with arguments [--gameDir, .]
-[26Jul2022 13:34:23.506] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.39, for MC 1.16.5 with MCP 20210115.111550
-[26Jul2022 13:34:23.525] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.39 Initialized
-[26Jul2022 13:34:23.809] [modloading-worker-11/INFO] [net.goose.lifesteal.LifeSteal/]: Lifestealers are on the loose!
-[26Jul2022 13:34:23.830] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[26Jul2022 13:34:24.388] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 36.2.39 Target: null
-[26Jul2022 13:34:25.176] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[26Jul2022 13:34:25.743] [main/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[26Jul2022 13:34:25.745] [main/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26Jul2022 13:34:25.746] [main/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26Jul2022 13:34:25.747] [main/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[26Jul2022 13:34:25.749] [main/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26Jul2022 13:34:25.754] [main/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.39_mapped_official_1.16.5.jar, main
-[26Jul2022 13:34:26.813] [Worker-Main-10/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
-[26Jul2022 13:34:27.823] [Worker-Main-10/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
-[26Jul2022 13:34:28.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[26Jul2022 13:34:29.439] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting minecraft server version 1.16.5
-[26Jul2022 13:34:29.440] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Loading properties
-[26Jul2022 13:34:29.440] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Default game type: SURVIVAL
-[26Jul2022 13:34:29.440] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[26Jul2022 13:34:29.574] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting Minecraft server on *:25565
-[26Jul2022 13:34:29.582] [Server thread/INFO] [net.minecraft.network.NetworkSystem/]: Using default channel type
-[26Jul2022 13:34:29.993] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[26Jul2022 13:34:29.994] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: The server will make no attempt to authenticate usernames. Beware.
-[26Jul2022 13:34:29.994] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[26Jul2022 13:34:29.994] [Server thread/WARN] [net.minecraft.server.dedicated.DedicatedServer/]: To change this, set "online-mode" to "true" in the server.properties file.
-[26Jul2022 13:34:30.059] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Preparing level "world"
-[26Jul2022 13:34:30.227] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[26Jul2022 13:34:31.247] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[26Jul2022 13:34:31.247] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[26Jul2022 13:34:31.248] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[26Jul2022 13:34:33.587] [Worker-Main-13/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:33.591] [Worker-Main-8/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:33.592] [Worker-Main-8/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:33.592] [Worker-Main-8/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:33.747] [Worker-Main-14/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:34.235] [Worker-Main-12/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:34.746] [Worker-Main-9/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[26Jul2022 13:34:35.234] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 89%
-[26Jul2022 13:34:35.712] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 5481 ms
-[26Jul2022 13:34:35.714] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done (5.698s)! For help, type "help"
-[26Jul2022 13:34:36.983] [Server thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:34:37.001] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@132da31a
-[26Jul2022 13:34:37.010] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: DevGoose0[/192.168.0.142:49256] logged in with entity id 140 at (29.5, 70.0, 210.5)
-[26Jul2022 13:34:37.031] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose0 joined the game
-[26Jul2022 13:34:38.662] [Server thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:34:38.663] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@3bb02b2
-[26Jul2022 13:34:38.667] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: DevGoose400[/192.168.0.142:49257] logged in with entity id 256 at (32.5, 70.0, 201.5)
-[26Jul2022 13:34:38.669] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose400 joined the game
-[26Jul2022 13:34:53.183] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Gave 1 [Netherite Axe] to DevGoose0
-[26Jul2022 13:35:00.347] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose400 was slain by DevGoose0
-[26Jul2022 13:35:02.653] [Server thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:06.428] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: DevGoose400 lost connection: Disconnected
-[26Jul2022 13:35:06.428] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose400 left the game
-[26Jul2022 13:35:07.978] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: DevGoose0 lost connection: Disconnected
-[26Jul2022 13:35:07.979] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose0 left the game
-[26Jul2022 13:35:09.825] [Server thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:09.847] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@38b228a7
-[26Jul2022 13:35:09.857] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: DevGoose400[/192.168.0.142:49275] logged in with entity id 289 at (29.177419030744602, 69.0, 203.4662077262379)
-[26Jul2022 13:35:09.859] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose400 joined the game
-[26Jul2022 13:35:10.926] [Server thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:10.940] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@676b7976
-[26Jul2022 13:35:10.950] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: DevGoose0[/192.168.0.142:49276] logged in with entity id 290 at (30.72061069963903, 69.0, 197.46988161856365)
-[26Jul2022 13:35:10.952] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose0 joined the game
-[26Jul2022 13:35:16.928] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: DevGoose0 lost connection: Disconnected
-[26Jul2022 13:35:16.928] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose0 left the game
-[26Jul2022 13:35:17.376] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: DevGoose400 lost connection: Disconnected
-[26Jul2022 13:35:17.376] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: DevGoose400 left the game
-[26Jul2022 13:35:18.170] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[26Jul2022 13:35:18.170] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[26Jul2022 13:35:18.170] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[26Jul2022 13:35:18.171] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[26Jul2022 13:35:18.945] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[26Jul2022 13:35:18.945] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[26Jul2022 13:35:18.946] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[26Jul2022 13:35:18.946] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[26Jul2022 13:35:18.948] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[26Jul2022 13:35:18.985] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[26Jul2022 13:35:18.992] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[26Jul2022 13:35:18.992] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-ng existing registry data into this CLIENT instance
-[26Jul2022 13:35:09.826] [Netty Client IO #4/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[26Jul2022 13:35:10.042] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[26Jul2022 13:35:10.049] [Render thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:10.512] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 14 advancements
-[26Jul2022 13:35:10.982] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] DevGoose0 joined the game
-[26Jul2022 13:35:10.983] [Render thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:16.931] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] DevGoose0 left the game
-[26Jul2022 13:35:17.355] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
- game
-[26Jul2022 13:35:09.537] [Render thread/INFO] [net.minecraft.client.gui.screen.ConnectingScreen/]: Connecting to 192.168.0.142, 25565
-[26Jul2022 13:35:10.389] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[26Jul2022 13:35:10.927] [Netty Client IO #4/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[26Jul2022 13:35:11.162] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[26Jul2022 13:35:11.170] [Render thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:11.659] [Render thread/INFO] [STDOUT/]: [net.goose.lifesteal.Capability.CapabilityRegistry$EventHandler:attachCapabilities:77]: Attached
-[26Jul2022 13:35:11.692] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 14 advancements
-[26Jul2022 13:35:16.905] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[27Jul2022 19:40:18.638] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, DevGoose700, --gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 36.2.39, --assetIndex, 1.16, --assetsDir, C:\Users\tardi\.gradle\caches\forge_gradle\assets, --version, MOD_DEV, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[27Jul2022 19:40:18.647] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.1.3+8.1.3+main-8.1.x.c94d18ec starting: java version 1.8.0_342 by Amazon.com Inc.
+[27Jul2022 19:40:18.968] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[27Jul2022 19:40:19.025] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/tardi/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.4/4ec7d77d9ab32596ca0b78bb123956734767e3a/mixin-0.8.4.jar Service=ModLauncher Env=CLIENT
+[27Jul2022 19:40:20.962] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\tardi\.gradle\caches\forge_gradle\assets, --username, DevGoose700, --assetIndex, 1.16, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[27Jul2022 19:40:25.035] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[27Jul2022 19:40:25.345] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Failed to verify authentication
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: null
+	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.checkPrivileges(YggdrasilSocialInteractionsService.java:97) ~[authlib-2.1.28.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilSocialInteractionsService.<init>(YggdrasilSocialInteractionsService.java:40) ~[authlib-2.1.28.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createSocialInteractionsService(YggdrasilAuthenticationService.java:152) ~[authlib-2.1.28.jar:?]
+	at net.minecraft.client.Minecraft.createSocialInteractions(Minecraft.java:551) ~[forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:383) ~[forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:149) ~[forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_342]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_342]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_342]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_342]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:38) ~[forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:94) [forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar:?]
+[27Jul2022 19:40:25.353] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: DevGoose700
+[27Jul2022 19:40:25.447] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
+[27Jul2022 19:40:26.007] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.39, for MC 1.16.5 with MCP 20210115.111550
+[27Jul2022 19:40:26.010] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.39 Initialized
+[27Jul2022 19:40:27.107] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[27Jul2022 19:40:27.745] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[27Jul2022 19:40:27.772] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Users\tardi\Desktop\Lifesteal-1.16.5\run\config\lifesteal-common.toml is not correct. Correcting
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments was corrected from null to its default, SimpleCommentedConfig:{}. 
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments.Amount of HitPoints Heart Crystal Permanently Gives: was corrected from null to its default, 2. 
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments.Percentage of max Health Heart Core Heals was corrected from null to its default, 0.25. 
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments.Disable Heart Crystals: was corrected from null to its default, false. 
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments.Disable Heart Cores: was corrected from null to its default, false. 
+[27Jul2022 19:40:27.777] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items and Enchantments.Disable Enchantments: was corrected from null to its default, false. 
+[27Jul2022 19:40:27.779] [modloading-worker-2/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Items was corrected from SimpleCommentedConfig:{Disable Heart Crystals:=false, Percentage of max Health Heart Core Heals=0.25, Amount of HitPoints Heart Crystal Permanently Gives:=2, Disable Heart Cores:=false} to its default, null. 
+[27Jul2022 19:40:27.834] [Worker-Main-8/INFO] [net.goose.lifesteal.LifeSteal/]: Lifestealers are on the loose!
+[27Jul2022 19:40:27.879] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[27Jul2022 19:40:28.260] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 36.2.39 Target: null
+[27Jul2022 19:40:33.320] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[27Jul2022 19:40:33.321] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[27Jul2022 19:40:33.643] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[27Jul2022 19:40:33.679] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[27Jul2022 19:40:33.679] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[27Jul2022 19:40:33.680] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[27Jul2022 19:40:33.681] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[27Jul2022 19:40:33.682] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[27Jul2022 19:40:33.682] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[27Jul2022 19:40:34.208] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[27Jul2022 19:40:34.210] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[27Jul2022 19:40:34.210] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[27Jul2022 19:40:34.674] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[27Jul2022 19:40:37.737] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2022 19:40:37.737] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:37.738] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:37.739] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2022 19:40:37.739] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:37.742] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar, main
+[27Jul2022 19:40:38.343] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2022 19:40:38.959] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2022 19:40:39.043] [Render thread/WARN] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: This world was saved with mod lifesteal version 2.6.0-1.16.5 and it is now at version 2.7.0-1.16.5, things may not work well
+[27Jul2022 19:40:39.049] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2022 19:40:39.433] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2022 19:40:39.434] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:39.434] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:39.435] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[27Jul2022 19:40:39.435] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[27Jul2022 19:40:39.435] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.16.5-36.2.39_mapped_official_1.16.5-recomp.jar, main
+[27Jul2022 19:40:39.995] [Render thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 7 recipes
+[27Jul2022 19:40:40.487] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 927 advancements
+[27Jul2022 19:40:40.509] [Render thread/WARN] [net.minecraftforge.fml.FMLWorldPersistenceHook/WP]: This world was saved with mod lifesteal version 2.6.0-1.16.5 and it is now at version 2.7.0-1.16.5, things may not work well
+[27Jul2022 19:40:40.510] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[27Jul2022 19:40:41.138] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[27Jul2022 19:40:41.169] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.16.5
+[27Jul2022 19:40:41.169] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[27Jul2022 19:40:41.360] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[27Jul2022 19:40:42.633] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[27Jul2022 19:40:42.633] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[27Jul2022 19:40:42.633] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[27Jul2022 19:40:42.908] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 1524 ms
+[27Jul2022 19:40:44.566] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 11, from 10
+[27Jul2022 19:40:45.410] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[27Jul2022 19:40:45.430] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@6ed1789c
+[27Jul2022 19:40:45.442] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: DevGoose700[local:E:0f59d64b] logged in with entity id 271 at (200.1107923699829, 64.0, -139.73168541356375)
+[27Jul2022 19:40:45.472] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: DevGoose700 joined the game
+[27Jul2022 19:40:45.749] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2022 19:40:45.762] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2022 19:40:45.894] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 23 advancements
+[27Jul2022 19:40:46.050] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2022 19:40:46.051] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2022 19:40:50.546] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Gave 1 [Netherite Sword] to DevGoose700]
+[27Jul2022 19:40:50.558] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Gave 1 [Netherite Sword] to DevGoose700
+[27Jul2022 19:40:54.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Applied enchantment Lifesteal III to DevGoose700's item]
+[27Jul2022 19:40:54.296] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Applied enchantment Lifesteal III to DevGoose700's item
+[27Jul2022 19:40:56.659] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Summoned new Sheep]
+[27Jul2022 19:40:56.663] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Summoned new Sheep
+[27Jul2022 19:40:57.461] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 37 advancements
+[27Jul2022 19:41:01.159] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Summoned new Sheep]
+[27Jul2022 19:41:01.163] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Summoned new Sheep
+[27Jul2022 19:41:06.289] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Summoned new Sheep]
+[27Jul2022 19:41:06.297] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Summoned new Sheep
+[27Jul2022 19:41:09.806] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 37 advancements
+[27Jul2022 19:41:12.478] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Set own game mode to Creative Mode]
+[27Jul2022 19:41:12.482] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Set own game mode to Creative Mode
+[27Jul2022 19:41:15.796] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Set own game mode to Survival Mode]
+[27Jul2022 19:41:15.799] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Set own game mode to Survival Mode
+[27Jul2022 19:41:18.607] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Summoned new Sheep]
+[27Jul2022 19:41:18.609] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Summoned new Sheep
+[27Jul2022 19:41:21.751] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2022 19:41:21.761] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2022 19:41:21.990] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2022 19:41:21.991] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2022 19:41:30.744] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [DevGoose700: Summoned new Sheep]
+[27Jul2022 19:41:30.745] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] Summoned new Sheep
+[27Jul2022 19:41:31.961] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 40 advancements
+[27Jul2022 19:41:35.200] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[27Jul2022 19:41:35.209] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2022 19:41:35.292] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2022 19:41:35.293] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2022 19:41:36.406] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: DevGoose700 lost connection: Disconnected
+[27Jul2022 19:41:36.406] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: DevGoose700 left the game
+[27Jul2022 19:41:36.415] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[27Jul2022 19:41:36.450] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[27Jul2022 19:41:36.450] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[27Jul2022 19:41:36.450] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[27Jul2022 19:41:36.450] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[27Jul2022 19:41:36.677] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
+[27Jul2022 19:41:36.677] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[27Jul2022 19:41:36.678] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2022 19:41:36.678] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[27Jul2022 19:41:36.678] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2022 19:41:36.692] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World (4)): All chunks are saved
+[27Jul2022 19:41:36.697] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[27Jul2022 19:41:36.697] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[27Jul2022 19:41:42.992] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

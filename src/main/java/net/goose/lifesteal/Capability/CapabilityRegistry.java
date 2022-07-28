@@ -7,6 +7,8 @@ import net.goose.lifesteal.Commands.setLives;
 import net.goose.lifesteal.Configurations.ConfigHolder;
 import net.goose.lifesteal.LifeSteal;
 import net.goose.lifesteal.api.IHeartCap;
+import net.goose.lifesteal.enchantment.ModEnchantments;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,6 +20,7 @@ import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -83,6 +86,36 @@ public class CapabilityRegistry {
             Entity newPlayer = event.getEntity();
 
             getHeart(newPlayer).ifPresent(IHeartCap::refreshHearts);
+        }
+
+        @SubscribeEvent
+        public static void livingDamageEvent(LivingDamageEvent event){
+
+            if(!ConfigHolder.SERVER.disableEnchantments.get()){
+                Entity Attacker = event.getSource().getEntity();
+
+                if(Attacker != null){
+
+                    if(Attacker instanceof LivingEntity){
+
+                        LivingEntity _Attacker = (LivingEntity) Attacker;
+
+                        float damage = event.getAmount();
+
+                        int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.LIFESTEAL.get(), _Attacker);
+
+                        if(level > 0){
+
+                            damage *= ((float) level / (float) ModEnchantments.LIFESTEAL.get().getMaxLevel()) * 0.5f;
+                            _Attacker.heal(damage);
+
+                        }
+
+                    }
+
+                }
+            }
+
         }
 
         @SubscribeEvent
