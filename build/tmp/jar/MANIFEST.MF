@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Lifesteal-1.16.5
-Implementation-Version: 2.6.0-1.16.5
-Specification-Vendor: examplemodsareus
-Specification-Title: examplemod
-Implementation-Timestamp: 2022-07-26T13:38:02-0700
-Specification-Version: 1
-Implementation-Vendor: examplemodsareus
-
